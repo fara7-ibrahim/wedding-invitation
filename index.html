@@ -146,7 +146,7 @@
   }
   @keyframes ring{ 0%{ opacity:.55; transform:scale(.9);} 100%{ opacity:0; transform:scale(1.35);} }
   .tap-hint{
-    margin-top:30px; font-size:.82rem; letter-spacing:.14em; color:var(--olive-ink);
+    margin-top:30px; font-size:.82rem; letter-spacing:.1em; color:var(--olive-ink);
     opacity:.85; animation:pulseHint 2.4s ease-in-out infinite;
   }
   @keyframes pulseHint{ 0%,100%{opacity:.5;} 50%{opacity:.95;} }
@@ -180,7 +180,7 @@
   }
 
   /* ================= COUPLE VIDEO (inside title section) ================= */
-  .moment-cap{ font-size:1.85rem; letter-spacing:.14em; color:var(--gold); margin:38px 0 26px; }
+  .moment-cap{ font-size:1.85rem; letter-spacing:0em; color:var(--gold); margin:38px 0 26px; }
   .moment-frame{ position:relative; width:min(72vw, 300px); }
   .moment-frame video{
     width:100%; display:block; box-shadow:var(--shadow);
@@ -198,7 +198,7 @@
 
   /* ================= DATE / COUNTDOWN ================= */
   .date-day{ font-size:clamp(2.4rem, 10vw, 3.4rem); color:var(--olive-ink); }
-  .date-full{ margin-top:10px; font-size:1.05rem; letter-spacing:.12em; color:var(--ink); opacity:.85; }
+  .date-full{ margin-top:10px; font-size:1.05rem; letter-spacing:0em; color:var(--ink); opacity:.85; }
   .date-glance{
     margin-top:18px; font-size:.85rem; letter-spacing:.06em; color:var(--olive);
     display:flex; align-items:center; gap:10px;
@@ -210,7 +210,7 @@
     border:1px solid var(--gold-light); box-shadow:0 12px 30px -14px rgba(90,70,30,.35);
   }
   .cd-num{ font-size:1.6rem; color:var(--olive-ink); font-weight:600; font-variant-numeric:tabular-nums; }
-  .cd-label{ margin-top:6px; font-size:.66rem; letter-spacing:.08em; color:var(--olive); }
+  .cd-label{ margin-top:6px; font-size:.66rem; letter-spacing:.01em; color:var(--olive); }
 
   /* ================= TIMELINE ================= */
   .timeline-title{ font-size:clamp(1.7rem, 7vw, 2.2rem); color:var(--olive-ink); margin-bottom:6px; }
@@ -224,7 +224,7 @@
   }
   .tl-stem{ position:absolute; top:18px; bottom:-40px; width:1px; background:var(--gold-light); right:4.5px; }
   .tl-item:last-child .tl-stem{ display:none; }
-  .tl-time{ font-size:.85rem; color:var(--gold); letter-spacing:.05em; margin-bottom:4px; }
+  .tl-time{ font-size:.85rem; color:var(--gold); letter-spacing:0em; margin-bottom:4px; }
   .tl-title{ font-size:1.15rem; color:var(--olive-ink); }
   .tl-item.tl-final .tl-title{ font-size:1.05rem; line-height:1.6; }
 
@@ -319,6 +319,16 @@ body{
     direction: rtl;
     unicode-bidi: plaintext;
     font-feature-settings: "liga" 1, "calt" 1;
+     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+.tap-hint{
+    margin-top:30px;
+    font-size:.82rem;
+    letter-spacing:.14em;
+    color:var(--olive-ink);
+    opacity:.85;
+    animation:pulseHint 2.4s ease-in-out infinite;
 }
 </style>
 </head>
